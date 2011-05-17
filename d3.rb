@@ -11,4 +11,6 @@ get '/bargraph' do
   erb :bargraph
 end
 
-
+get '/bargraph2' do 
+  erb :bargraph2
+end
