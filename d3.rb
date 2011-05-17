@@ -14,3 +14,7 @@ end
 get '/bargraph2' do 
   erb :bargraph2
 end
+
+get '/bouncybawls' do
+  erb :bouncybawls
+end
