@@ -18,3 +18,7 @@ end
 get '/bouncybawls' do
   erb :bouncybawls
 end
+
+get '/population' do
+  erb :population
+end
