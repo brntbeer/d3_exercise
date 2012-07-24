@@ -13,7 +13,7 @@ var r = d3.scale.linear().domain([0,1]).range([50,100]),
     c = d3.scale.linear().domain([0,1]).range(["hsl(250, 50%, 50%)", "hsl(350, 100%, 50%)"]).interpolate(d3.interpolateHsl)
 
 
-vis.append("svg:circle")
+var circle = vis.append("svg:circle")
       .attr("cx", function(d) { return (screen.width-400)/2 })
       .attr("cy", function(d) { return innerHeight/2 })
       .attr("stroke-width", "none")
@@ -21,10 +21,22 @@ vis.append("svg:circle")
       .attr("fill-opacity", .5)
       .attr("r", function() { return r(Math.random()) })
       .on("mouseover", function(){
-        d3.select(this).transition()
-        .attr("r", function() { return r(Math.random()) })
-        .delay(0)
-        .duration(2000)
-        .ease("elastic", 2, .3)
+        reload_ball(this)
+        update_text()
       })
 
+function reload_ball(ball) {
+  d3.select(ball).transition()
+    .attr("r", function() { return r(Math.random()) })
+    .delay(0)
+    .duration(2000)
+    .ease("elastic", 2, .3)
+}
+function update_text() {
+  vis.select("text").remove()
+  rad = d3.round(circle.attr("r"),2)
+  vis.append("text")
+    .attr("x", function(d) { return (screen.width-400)/2 - (rad*0.25)  })
+    .attr("y", function(d) { return innerHeight/2 })
+    .text(rad)
+}
