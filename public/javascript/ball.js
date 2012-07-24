@@ -12,9 +12,8 @@ var vis = d3.select("body")
 var r = d3.scale.linear().domain([0,1]).range([50,100]),
     c = d3.scale.linear().domain([0,1]).range(["hsl(250, 50%, 50%)", "hsl(350, 100%, 50%)"]).interpolate(d3.interpolateHsl)
 
-vis.selectAll("circle")
-      .data(data)
-      .enter().append("svg:circle")
+d3.select("svg")
+      .append("svg:circle")
       .attr("cx", function(d) { return (screen.width-400)/2 })
       .attr("cy", function(d) { return innerHeight/2 })
       .attr("stroke-width", "none")
