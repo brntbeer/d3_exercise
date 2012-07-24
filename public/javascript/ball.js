@@ -22,7 +22,6 @@ var circle = vis.append("svg:circle")
       .attr("r", function() { return r(Math.random()) })
       .on("mouseover", function(){
         reload_ball(this)
-        update_text()
       })
 
 function reload_ball(ball) {
@@ -30,7 +29,8 @@ function reload_ball(ball) {
     .attr("r", function() { return r(Math.random()) })
     .delay(0)
     .duration(2000)
-    .ease("elastic", 2, .3)
+    .ease("elastic", 5, .3)
+    .each("end", update_text)
 }
 function update_text() {
   vis.select("text").remove()
