@@ -22,3 +22,11 @@ end
 get '/population' do
   erb :population
 end
+
+get "/bar" do
+  erb :bar
+end
+
+get "/ball" do
+  erb :ball
+end
