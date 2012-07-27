@@ -1,5 +1,4 @@
-#D3.js Exercises [Disclaimer](https://github.com/brntbeer/d3_exercises#disclaimer)
-
+#D3.js Exercises ([Disclaimer](https://github.com/brntbeer/d3_exercise#disclaimer))
 
 ##Getting Started
 * Clone the project: `git clone https://github.com/brntbeer/d3_exercise.git`
@@ -22,6 +21,6 @@ My js files are under ./public/javascript/ for your viewing pleasure.
 
 
 ##Disclaimer
-As mentioned [above](https://github.com/brntbeer/d3_exercises#wut), these are a collection 
+As mentioned [above](https://github.com/brntbeer/d3_exercise#wut), these are a collection 
 of exercises I've followed from other sites. They are for the most part not my own work, although
 in some situations I've made alterations to them to get a better grasp of what is happeining.
