@@ -13,6 +13,17 @@
 </head>
 <body>
   <div class="content">
+    <div class="header">
+      <table>
+        <tr>
+          <% @graphs.each do |graph| %>
+            <td>
+              <a href="/<%= graph %>"><%= graph %></a>
+            </td>
+          <% end %>
+        </tr>
+      </table>
+    </div>
     <% %w(notice warning error).each do |key| %>
       <% if flash[key] %>
         <div class="flash flash_<%= key %>">
