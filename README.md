@@ -1,5 +1,13 @@
 #D3.js Exercises
 
+##Getting Started
+* Clone the project: `git clone https://github.com/brntbeer/d3_exercise.git`
+* Change directories:`cd d3_exercise`
+* Start the server: `rackup`
+
+Thats it! Now just open a browser to `localhost:9292` and start playing around
+with some graphs!
+
 
 ##Wut?
 I wanted to start messing around with a visualization framework. I chose
