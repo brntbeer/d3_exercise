@@ -24,7 +24,7 @@ svg.selectAll("circles")
    .append("svg:circle")
    .attr("cx", function(d) { return xScale(d[0]); })
    .attr("cy", function(d) { return yScale(d[1]); })
-   .attr("r", function(d) { return Math.sqrt(h - d[1]);});
+   .attr("r", function(d) { return Math.sqrt(d[0] + d[1]);});
 
 svg.selectAll("text")
    .data(dataset)
