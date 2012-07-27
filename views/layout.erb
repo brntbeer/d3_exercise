@@ -9,7 +9,7 @@
   <div class="content">
     <% %w(notice warning error).each do |key| %>
       <% if flash[key] %>
-        <div class="flash_<%= key %>">
+        <div class="flash flash_<%= key %>">
           <%= flash[key] %>
         </div>
       <% end %>

@@ -1,0 +1,17 @@
+.flash{
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 10px;
+  font-family: Georgia, Times New Roman, serif;
+  font-size: 16px;
+}
+.flash_notice {
+  background: #0B6308
+}
+.flash_warning {
+  background: #F2A90A
+}
+.flash_error{
+  background: #FF1800
+}
