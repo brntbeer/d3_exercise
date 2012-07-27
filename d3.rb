@@ -37,4 +37,8 @@ class D3Example < Sinatra::Base
     erb :ball
   end
 
+  get "/scatterplot" do
+    erb :scatterplot
+  end
+
 end
