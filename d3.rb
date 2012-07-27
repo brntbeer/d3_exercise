@@ -5,7 +5,7 @@ class D3Example < Sinatra::Base
   use Rack::Flash, :sweep => true,
                    :accessorize => [:notice, :warning, :error]
   before do
-    @graphs = %w(bargraph bargraph2 bouncybawls population ball)
+    @graphs = %w(bargraph bargraph2 bouncyballs population ball)
   end
 
   error 400..510 do
@@ -25,8 +25,8 @@ class D3Example < Sinatra::Base
     erb :bargraph2
   end
 
-  get '/bouncybawls' do
-    erb :bouncybawls
+  get '/bouncyballs' do
+    erb :bouncyballs
   end
 
   get '/population' do
