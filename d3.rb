@@ -9,7 +9,7 @@ class D3Example < Sinatra::Base
   end
 
   error 400..510 do
-    flash[:warning] = "Sorry, that page either doesn't exist."
+    flash[:warning] = "Sorry, that page either doesn't exist or is unavailable"
     redirect "/bargraph"
   end
 
