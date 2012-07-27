@@ -4,6 +4,9 @@ class D3Example < Sinatra::Base
   enable :sessions
   use Rack::Flash, :sweep => true,
                    :accessorize => [:notice, :warning, :error]
+  before do
+    @graphs = %w(bargraph bargraph2 bouncybawls population ball)
+  end
 
   error 400..510 do
     flash[:warning] = "Sorry, that page either doesn't exist."
