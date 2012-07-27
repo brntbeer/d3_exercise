@@ -6,7 +6,7 @@ class D3Example < Sinatra::Base
                    :accessorize => [:notice, :warning, :error]
 
   error 400..510 do
-    flash[:warning] = "Sorry, that page either doesn't exist or is down"
+    flash[:warning] = "Sorry, that page either doesn't exist."
     redirect "/bargraph"
   end
 
